@@ -1,0 +1,15 @@
+
+# show
+# -a all
+# -r remote
+$ git branch -a
+
+# modify
+$ git branch -m <current> <new>
+
+# delete
+$ git branch -d <branch>
+
+# delete remote
+$ git push origin --delete <branch>
+
