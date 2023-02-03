@@ -1,0 +1,15 @@
+
+$ git status
+
+$ git add
+
+$ git commit -m "message"
+
+$ git commit -m "message" --amend
+
+
+# pull = fetch + merge
+$ git pull [origin master]
+
+$ git fetch [origin master]
+
