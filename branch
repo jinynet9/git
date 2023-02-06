@@ -1,4 +1,6 @@
 
+https://learngitbranching.js.org/
+
 # show
 # -a all
 # -r remote
@@ -12,4 +14,7 @@ $ git branch -d <branch>
 
 # delete remote
 $ git push origin --delete <branch>
+
+# switch
+$ git switch <branch>
 
