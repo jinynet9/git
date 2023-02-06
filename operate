@@ -8,8 +8,25 @@ $ git commit -m "message"
 $ git commit -m "message" --amend
 
 
+# push
+$ git push origin master
+
+
 # pull = fetch + merge
 $ git pull [origin master]
 
 $ git fetch [origin master]
+
+
+#
+# history & revision
+#
+
+# show HEAD
+$ git reflog
+
+# reset
+$ git reset HEAD^ --hard
+$ git reset HEAD~2 --hard
+$ git reset 991ee8c --mixed
 
