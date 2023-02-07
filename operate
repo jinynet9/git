@@ -12,7 +12,7 @@ $ git commit -m "message"
 $ git commit -m "message" --amend
 
 # uncommit
-$ git reset HEAD^ --soft
+# refer below
 
 
 # push
@@ -25,6 +25,13 @@ $ git pull [origin master]
 # origin에서 master 브랜치를 가져오고, 지역 저장소 복사본의 이름을 origin/master로 지정한다
 $ git fetch [origin master]
 $ git merge origin/master
+
+# remote 저장소의 정보를 로컬 저장소의 FETCH_HEAD 브랜치로 가져온다
+$ git fetch
+$ git checkout FETCH_HEAD
+$ git log --decorate --oneline
+$ git checkout master
+$ git merge FETCH_HEAD
 
 
 #
@@ -41,10 +48,13 @@ $ git log -p
 # show HEAD
 $ git reflog
 
-# reset
-$ git reset HEAD^ --hard
-$ git reset HEAD~2 --hard
-$ git reset 991ee8c --mixed
+# uncommit
+# reset: 로컬 저장소의 HEAD 위치를 바꿔서 변경
+# revert: 이전 커밋과 정반대의 데이터를 추가하여 되돌림
+#
+$ git reset --hard HEAD^
+$ git reset --hard HEAD~2
+$ git reset --mixed 991ee8c
 
 
 #

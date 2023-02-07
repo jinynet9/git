@@ -10,3 +10,6 @@ $ git remote add origin git@github.com:jinynet9/git.git
 # delete
 $ git remote remove origin
 
+# change
+$ git remote rename <before> <after>
+
