@@ -14,12 +14,16 @@ $ git branch -vv
 $ git branch -a
 
 # add
-$ git branch <new-branch>
+$ git branch <new-branch> [<commit-id>]
 
+# switch
 $ git checkout <new-branch>
 
 # add & checkout
 $ git checkout -b <new-branch>
+
+# checkout remote branch (-t, --track)
+$ git checkout -t <remote-branch>
 
 # modify
 $ git branch -m <current> <new-branch>
@@ -41,7 +45,4 @@ $ git checkout main
 $ git merge bug-fix
 
 
-
-# switch
-$ git checkout <branch>
 

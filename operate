@@ -33,6 +33,17 @@ $ git log --decorate --oneline
 $ git checkout master
 $ git merge FETCH_HEAD
 
+#
+# stash
+#
+# show list
+$ git stash list
+$ git stash show stash@{0}
+# push
+$ git stash [save] [-m 'xxx']
+# pop = apply + drop
+$ git stash pop [stash@{0}]
+
 
 #
 # history & revision
@@ -85,6 +96,9 @@ $ git diff <branch2>
 
 # commit1 <--> commit2
 $ git diff <commit1-hash>..<commit2-hash>
+$ git diff HEAD~1..HEAD
+$ git diff HEAD~1..HEAD --stat
+$ git diff HEAD~1..HEAD --compact-summary
 
 # files changed between branch1 and branch2 
 git diff --name-status branch1..branch2

@@ -1,23 +1,41 @@
+#
+# version 2.3
+# switch
+# restore
+#
+
 [user]
 	name = JINY
 	email = jinynet9@dayou.co.kr
 [alias]
+	a  = add
+	br = branch
 	co = checkout
+	sw = checkout
+	sw23 = switch
+	c  = commit
+	cm = commit -m
 	st = status
 	s  = status -s
-	ci = commit
-	br = branch
-	us = reset HEAD
+	# modify cancel
+	um = git checkout --
+	um23 = git restore
+	# stage cancel
+	us = reset HEAD --
+	us23 = git restore --staged
+#
 #	lg = log --graph --abbrev-commit --decorate --format=format:'%C(cyan)%h%C(reset) - %C(green)(%ar)%C(reset) %C(dim white)%s%C(reset) %C(dim white)- %an%C(reset)%C(yellow)%d%C(reset)' --all
 #	lg = log --graph --abbrev-commit --decorate --pretty=oneline
 	lg = log --graph --abbrev-commit --decorate --oneline
 	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	rl = reflog
 
 	alias = "! \
 		git config --list \
 		| egrep '^alias.+' \
 		| sed 's/^alias\\.//' \
+		| sed '/^alias/d' \
 		| sed 's/=/\t/' \
 		"
 
@@ -34,6 +52,7 @@
 #
 [core]
 	excludesfile = ~/.gitignore
+	editor = gvim
 [color]
 	ui = auto
 [diff]
